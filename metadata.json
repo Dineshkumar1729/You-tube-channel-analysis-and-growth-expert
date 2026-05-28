@@ -1,0 +1,6 @@
+{
+  "name": "YouTube Channel Analyzer & Growth Expert",
+  "description": "Deep AI-powered analysis of YouTube channels, competitor gap detection, and actionable viral growth strategies with professional reporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
