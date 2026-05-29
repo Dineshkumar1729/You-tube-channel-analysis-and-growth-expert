@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Sparkles, LayoutDashboard, Network, AlertCircle, HelpCircle } from "lucide-react";
 import ChannelInput from "./components/ChannelInput";
+import ConnectivityDiagnostics from "./components/ConnectivityDiagnostics";
 import ReportDashboard from "./components/ReportDashboard";
 import ArchitectureViewer from "./components/ArchitectureViewer";
 import { AnalysisInput, Report } from "./types";
@@ -119,6 +120,9 @@ export default function App() {
             
             {/* Input target panel */}
             <ChannelInput onStartAnalysis={handleStartAnalysis} isLoading={isLoading} />
+
+            {/* AI Diagnostics & Key Validation Utility */}
+            <ConnectivityDiagnostics />
 
             {/* ERROR BOUND */}
             {errorMsg && (

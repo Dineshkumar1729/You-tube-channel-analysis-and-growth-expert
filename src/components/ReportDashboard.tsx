@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { 
   BarChart, Sparkles, AlertCircle, Heart, Star, Compass, RefreshCw, 
   Flame, TrendingUp, CheckCircle, HelpCircle, Eye, ThumbsUp, MessageSquare, 
-  Lock, BookOpen, UserCheck, ShieldAlert, Award, Grid, Users, LayoutDashboard, Copy
+  Lock, BookOpen, UserCheck, ShieldAlert, Award, Grid, Users, LayoutDashboard, Copy,
+  Download, Printer, FileText
 } from "lucide-react";
 import { Report, VideoPerformance } from "../types";
 
@@ -15,6 +16,7 @@ export default function ReportDashboard({ report, isSimulated }: ReportDashboard
   const [activeTab, setActiveTab] = useState<"summary" | "videos" | "audience" | "competitors" | "strategy" | "seo">("summary");
   const [selectedVideoId, setSelectedVideoId] = useState<string>(report.videoAnalysis[0]?.id || "");
   const [copiedLink, setCopiedLink] = useState("");
+  const [isExporting, setIsExporting] = useState<string | null>(null);
 
   const activeVideo = report.videoAnalysis.find(v => v.id === selectedVideoId) || report.videoAnalysis[0];
 
@@ -22,6 +24,44 @@ export default function ReportDashboard({ report, isSimulated }: ReportDashboard
     navigator.clipboard.writeText(text);
     setCopiedLink(id);
     setTimeout(() => setCopiedLink(""), 2000);
+  };
+
+  const handleExport = async (format: "pdf" | "docx" | "pptx" | "json") => {
+    setIsExporting(format);
+    try {
+      const response = await fetch("/api/export", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ report, format })
+      });
+      if (!response.ok) {
+        throw new Error("Failed compiling the selected growth report template format.");
+      }
+      
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      
+      const suffixes = {
+        pdf: "pdf_printable.html",
+        docx: "docx_report.doc",
+        pptx: "pptx_outline.txt",
+        json: "interactive_dashboard.json"
+      };
+      
+      const channelSlug = (report.targetChannel?.name || "YouTube_Channel").replace(/[^a-z0-9]/gi, "_").toLowerCase();
+      a.download = `${channelSlug}_quality_${suffixes[format]}`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
+    } catch (err: any) {
+      console.error(err);
+      alert(err?.message || "An unexpected issue occurred while packing the file target.");
+    } finally {
+      setIsExporting(null);
+    }
   };
 
   const sentiment = report.audienceAnalysis.sentiment;
@@ -100,6 +140,61 @@ export default function ReportDashboard({ report, isSimulated }: ReportDashboard
               {report.targetChannel.brandingQuality}
             </span>
           </div>
+        </div>
+      </div>
+
+      {/* Export & Download Control Centre */}
+      <div id="export-controls" className="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-lg relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none" />
+        <div className="space-y-0.5">
+          <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold block">
+            Comprehensive Report Exporter
+          </span>
+          <p className="text-xs text-slate-400">
+            Download this finalized audit into professional offline channels or publication-grade files.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap gap-2 w-full md:w-auto">
+          {/* PDF button */}
+          <button
+            onClick={() => handleExport("pdf")}
+            disabled={isExporting !== null}
+            className="flex items-center gap-2 px-3.5 py-2 bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 disabled:opacity-50 text-xs font-sans font-medium rounded-xl border border-rose-500/20 transition-all cursor-pointer"
+          >
+            <Printer className="w-3.5 h-3.5" />
+            <span>{isExporting === "pdf" ? "Packaging PDF..." : "Export PDF Handbook"}</span>
+          </button>
+          
+          {/* DOCX button */}
+          <button
+            onClick={() => handleExport("docx")}
+            disabled={isExporting !== null}
+            className="flex items-center gap-2 px-3.5 py-2 bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 disabled:opacity-50 text-xs font-sans font-medium rounded-xl border border-sky-500/20 transition-all cursor-pointer"
+          >
+            <FileText className="w-3.5 h-3.5" />
+            <span>{isExporting === "docx" ? "Assembling Word..." : "Export DOCX Report"}</span>
+          </button>
+
+          {/* PPTX button */}
+          <button
+            onClick={() => handleExport("pptx")}
+            disabled={isExporting !== null}
+            className="flex items-center gap-2 px-3.5 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 disabled:opacity-50 text-xs font-sans font-medium rounded-xl border border-amber-500/20 transition-all cursor-pointer"
+          >
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>{isExporting === "pptx" ? "Formatting Slides..." : "Export PPTX Outline"}</span>
+          </button>
+
+          {/* Raw JSON option */}
+          <button
+            onClick={() => handleExport("json")}
+            disabled={isExporting !== null}
+            className="flex items-center gap-2 px-3.5 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 disabled:opacity-50 text-xs font-sans font-medium rounded-xl border border-emerald-500/20 transition-all cursor-pointer"
+          >
+            <Download className="w-3.5 h-3.5" />
+            <span>{isExporting === "json" ? "Extracting..." : "Download JSON Data"}</span>
+          </button>
         </div>
       </div>
 
