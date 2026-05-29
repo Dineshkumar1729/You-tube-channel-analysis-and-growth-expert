@@ -782,6 +782,46 @@ function generateSimulatedReport(channelInput: string, years: string[], videoCou
       pacingQuality: topic.high ? 8 : 4,
       emotionalEngagement: topic.high ? 8 : 4,
 
+      thumbnailPsychology: topic.high
+        ? "Uses a high-contrast layout emphasizing a clean, dark interface workspace mockup. It leverages minimalist order and elegant negative space rather than overwhelming orange arrows, which appeals strongly to self-motivated high-focus technical programmers looking for premium setup models."
+        : "Text labels on the preview thumbnail are too dense and lack high-contrast background shading. As a result, mobile users find it difficult to read. The focal point is too general, missing the distinct outcome state, which reduces the split-second curiosity gap required to choose this video.",
+      titleCtrAnalysis: topic.high
+        ? "Strong click-through rate (CTR) of approximately 7.2%. The title front-loads highly specific target structures combined with popular technologies. It appeals directly to high-intent terms that command priority ranking in search index systems."
+        : "Weak CTR of roughly 2.1%. The title is too passive, long, and focuses on abstract setup errors instead of practical outcomes. Front-loading non-emotional, generic installation verbs reduces organic CTR when suggested next to highly visual competitors.",
+      hookEffectiveness: topic.high
+        ? "Excellent hook effectiveness. The visual build was previewed in the first 4 seconds while showing clean, high-contrast dynamic graphs. Viewers are immediately assured of the video's high final value, reducing early bounce rates and ensuring a solid retention spike."
+        : "Deficient, low-performing hook. Spent 45 seconds summarizing installation scripts and configurations verbally over static code blocks before showing any finished showcase build. Viewers lose interest quickly and bounce in the initial critical 15-second opening interval.",
+      storytellingQualityAnalysis: topic.high
+        ? "Superb storytelling structure. It adopts a clean journey approach, starting with defining clean types, walking through scaffolding, and culminating in successful runtime builds without edits. Viewers stay to witness the triumph of clean compilation."
+        : "Unstructured technical vlogging rather than a deliberate narrative. The troubleshooting segments were left unedited, resulting in slow, monotonous periods. Lacks a clear transition structure between high-effort steps, making the video feel tedious.",
+      editingQualityAnalysis: topic.high
+        ? "Impeccable. Employs deliberate fluid pacing, zooming into terminal codes or relevant UI previews exactly at synchronized typing intervals. Keyboard sound levels are pristine, adding comfortable ASMR texture to the high-focus study vibe."
+        : "Pacing is too static and monotonous. The screen remains fixed on a single large code file for up to 3 minutes without zoom adjustments, pan, or on-screen annotations, leading to visual exhaustion and viewer drop-offs.",
+      seoRankingPossibility: topic.high
+        ? "Exceptional search indexing capability. Front-loaded key technologies like TypeScript, React, and Gemini are integrated directly with searchable high-intent queries, making it highly discoverable by organic developers."
+        : "Very low search ranking possibility. Uses highly general tags and fails to prioritize the primary audience terms in the title or the description box. Search algorithms cannot index the targeted niche effectively.",
+      reachRecommendationPotential: topic.high
+        ? "Broad organic reach potential. Taps into comfort study aesthetics and premium software development. Recommended by YouTube's home feed and suggested videos under highly relevant developer lifestyle niches."
+        : "Highly restricted to narrow search match targets. The low click-through-rate and low-remediating early viewer retention disqualify this upload from recommended home feeds or broad viral recommendations.",
+      viralPotentialAnalysis: topic.high
+        ? "Excellent viral potential (78/100). The combination of a highly professional, beautiful UI and detailed steps satisfies the strong organic sharing trigger in programming communities on Reddit, X, and discord threads."
+        : "Extremely low viral propensity (32/100). Lacks a distinct wow-factor, shareable open-source ZIP code files, or trending technical updates that could spark organic recommendation loops in dev groups.",
+      subscriberConversionPossibility: topic.high
+        ? "Strong subscriber conversion (8.1%). Viewers associate this high-fidelity walkthrough with elite engineering workspaces, generating an immediate urge to subscribe to build a long-term resource sanctuary."
+        : "Low conversion probability. Since the final code framework was not motivated or demonstrated beautifully, viewers exit with frustration, viewing the channel as a generic repository of basic setup issues.",
+      audienceDropOffReasons: topic.high
+        ? "Minimal drop-offs. Minor 2% dip at minute 12 during comprehensive data type interface mappings, which is easily recovered once the live rendering starts."
+        : "Severe 40% retention drop-off in the first 30 seconds due to slow verbal introductory explanations, followed by a steady bleed of viewers during terminal installations.",
+      weakSections: topic.high
+        ? ["Minutes 14:10-15:20 (detailed backend routing configs)"]
+        : ["0:00-0:45 (unproductive introductory explanation)", "3:30-5:12 (monotonous terminal package installation loop)"],
+      strongSections: topic.high
+        ? ["0:01-0:30 (stunning visual system showcase)", "5:40-10:15 (highly dynamic react type state coding session)"]
+        : ["8:10-9:50 (final UI styling segments)"],
+      detailedImprovementRecommendations: topic.high
+        ? ["Add direct external links to download resources in the first line of descriptions.", "Pin an engaging comment with high-conversion survey prompts."]
+        : ["Trim introductory chatter down to 8 seconds maximum.", "Showcase the completed SaaS app inside the first 5 seconds to motivate viewers.", "Use on-screen graphics or diagrams to explain package configurations instead of live-debugging terminal failures."],
+
       whyPerformedHigh: topic.high 
         ? "Exemplary typography, high contrast thumbnail focal point, immediate live showcase of build outcome in the first 5 seconds, and direct transition to code along instructions without generic self-promotional delays." 
         : "Niche title query limits organic suggestion reach, thumbnail text is too dense to parse clearly on small mobile displays, and code-installation errors were elaborated for too long, crashing viewer retention levels.",
@@ -832,7 +872,13 @@ function generateSimulatedReport(channelInput: string, years: string[], videoCou
     audienceEngagement: "Very high, pinned questions and active Discord channels",
     brandingStrategy: "Unified workspace branding, minimalist font tags, signature developer setup",
     strengths: ["Highly recognizable signature thumbnails", "Immense speed of release on tech updates"],
-    weaknesses: ["Repetitive content formatting", "Lower deep-dive explanations values"]
+    weaknesses: ["Repetitive content formatting", "Lower deep-dive explanations values"],
+    
+    storytellingQuality: idx === 0 ? "Uses high-tension, fast narrative arcs featuring immediate stakes, dramatic failures, and high-energy pacing." : "Focuses on linear project timelines, structured walkthroughs, and steady workspace vibes.",
+    retentionStrategy: idx === 0 ? "Applies high-frequency sound transitions and dramatic graphics overlays matching vocal cues every 4-6 seconds." : "Maintains calm focus by relying on ambient soundtrack loops and keyboard ASMR triggers.",
+    brandingQuality: idx === 0 ? "High energy, neon color palettes, exaggerated custom avatars, and loud signature opening tracks." : "Elegant, minimalist typography pairing, dark slate device mocks, and soft cinematic lighting cues.",
+    viralContentStrategy: idx === 0 ? "Rides extreme tech-industry controversies, news gossip, and polarizing high-stakes software debates." : "Capitalizes on long-form productivity aesthetics and beautiful high-fidelity component libraries.",
+    emotionalEngagementMethods: idx === 0 ? "Plays on FOMO and anxiety: 'If you aren't doing this, you are falling behind in 2026!'." : "Evokes a feeling of warm sanctuary, creative competence, and intellectual satisfaction."
   }));
 
   return {
@@ -888,7 +934,17 @@ function generateSimulatedReport(channelInput: string, years: string[], videoCou
       competitorAudiencePsychology: "Leveraging FOMO (Fear Of Missing Out) and curiosity-gap hooks representing tech updates as revolutionary breaks.",
       contentGaps: ["Detailed serene full bundle setup walkthroughs", "Minimalist aesthetic dashboard source files"],
       untappedOpportunities: ["Curating an open-source calm developer template library", "Weekly productivity routine vlogs using elegant screen widgets"],
-      missingStrategiesInTargetChannel: ["Consistent Short-form visual guides mapping to full builds", "Aggressive keyword insertion in description boxes"]
+      missingStrategiesInTargetChannel: ["Consistent Short-form visual guides mapping to full builds", "Aggressive keyword insertion in description boxes"],
+
+      // 8 Critical growth inhibitors answers
+      mistakesReducingGrowth: "1. Overly literal, technical titles that fail to spark curiosity. 2. Boring or slow introductory scripts (>40s) before showing any finished showcase build. 3. Lack of consistent micro-shorts to serve as an organic channel funnel.",
+      whyVideosNotReachingAudience: "Videos are highly tailored to existing expert subscribers, which creates a narrow audience profile. Lacking broad-appeal hook entry points prevents the algorithm from suggesting them to beginner or casual development groups.",
+      whyCompetitorsPerformBetter: "Competitors strategically utilize curiosity-gaps ('The React feature everyone hates') and design thumbnails styled for mobile legibility, achieving up to 3x higher baseline CTR.",
+      strategyGapsExist: "Missing short-form video paths, lack of interactive community lead-magnets (e.g., template code downloads behind simple sub-triggers), and a total absence of search term groupings in older video descriptions.",
+      underperformingContentStyles: "Static configuration walkthroughs, dry package dependencies alignment vlogs, and raw terminal diagnostic clips that drag on without visual context.",
+      higherReachContentFormats: "Start-to-finish full project building tutorials, aesthetic workspace lifestyle vlogs, and highly actionable 1-minute visual cheat-sheets.",
+      audienceBehaviorPatternsAffectingGrowth: "High-focus developers represent high watch-time potential, but they have zero tolerance for repetitive fluff, dropping off aggressively if terminal installations take longer than 30 seconds to run.",
+      algorithmFactorsLimitingRecommendations: "A low initial click-through rate (CTR < 2.5%) combined with early viewer drop-offs in the first 30 seconds signals a low-satisfaction score to the YouTube recommendation engine, restricting viral home-feed placement."
     },
     growthStrategy: {
       contentToCreate: "Deliver beautiful project-build vlogs using Gemini API capabilities, and high-fidelity Tailwind frameworks. Keep the serene layout but upgrade thumbnail CTR using problem-outcome visual splits.",
@@ -902,6 +958,7 @@ function generateSimulatedReport(channelInput: string, years: string[], videoCou
       hookRetentionBoosters: ["Immediate 3-second live showcase of the completed application running", "Visual layout file architecture map displayed in first 10 seconds"],
       uploadStrategy: "Consistent weekly publishing on Sunday morning, scheduling shorts for Tuesday and Thursday afternoons to build steady mid-week interest.",
       shortsStrategy: "Showcase the final responsive UI in 15 seconds, detailing the top 3 libraries used, with a direct pinned pointer to the full walkthrough tutorial.",
+      shortsVideoStrategy: "Quick visually polished screen recordings featuring neon code edits overlaying the end-state application layout.",
       storytellingStrategy: "Problem-Agitation-Solution narrative. Agitate slow manual code tasks, showcase the automated layout solution, walk through the build gracefully.",
       hacks: ["Implement automatic community lead assets: offer detailed Figma or ZIP setups in comments for active subscribers", "Optimise channel playlists into structured academy curriculums"],
       howToGainSubsFaster: "Integrate subscription markers in the main code walkthrough right before implementing the most highly anticipated module.",
@@ -937,9 +994,21 @@ function generateSimulatedReport(channelInput: string, years: string[], videoCou
       audienceDemandTrends: ["Extreme code visual and color aesthetics", "Readable, modular file layouts"]
     },
     growthRoadmap: {
-      days30Plan: ["Optimize older top-performing video description metadata layouts", "Create 3 master aesthetic visual thumbnails frames", "Launch unified description layout templates"],
-      days60Plan: ["Release a 15-second high-engagement Short every Tuesday and Thursday", "Pin core subscription calls before main dashboard features"],
-      days90Plan: ["Publish a curated digital code package asset for loyal subscribers", "Scale database guides to cover modern caching layers"],
+      days30Plan: [
+        "Revise channel-wide metadata: Adjust titles and tags on top 5 search-heavy uploads to index for low-competition keywords.",
+        "Aesthetic Frame Template: Establish 3 unified dark-slate thumbnail mockups to achieve visual consistency.",
+        "Script Optimization: Re-write visual intros, limiting introductory channel-intro talking heads to 8 seconds maximum."
+      ],
+      days60Plan: [
+        "Shorts Channel Funnel: Establish consistent Short releases on Tuesday & Thursday detailing specific library configs.",
+        "Interactive Community Trigger: Offer clean aesthetic workspace templates to comments answering visual code trivia.",
+        "Subscribers Anchor: Deploy polite, beautifully animated subscription cue overlays during intermediate transition slides."
+      ],
+      days90Plan: [
+        "Playlists Overhaul: Restructure video groupings into cohesive 'calm developer academics' curricula.",
+        "Digital Resource Vault: Pack your core Tailwind and TS config assets into a downloadable high-focus dashboard ZIP file.",
+        "Collaborative Workspace Stream: Launch monthly ASMR-focused aesthetic code-alongs syncing with community request panels."
+      ],
       weeklyUploadPlan: [
         {
           "phase": "Week 1: Foundations & Visual Setup",
@@ -956,10 +1025,122 @@ function generateSimulatedReport(channelInput: string, years: string[], videoCou
           ]
         }
       ],
-      seoRoadmap: ["Update descriptions of older tutorials to index search clusters", "Integrate automated chapters timestamp anchors"],
-      audienceEngagementRoadmap: ["Create custom visual polls sharing screen setup choices", "Prompt subscriber comments via visual code challenges"],
-      competitorBeatingRoadmap: ["Identify competitors' shallow videos and create thorough, pristine walkthroughs of same concepts", "Offer clean complete template files competitors hide behind paywalls"],
-      subscriberGrowthRoadmap: ["Establish a subscription lock-lead for helpful workspace background wallpapers", "Embed polite verbal callouts during intermediate transition states"]
+      seoRoadmap: [
+        "Inject secondary semantic keyword blocks ('beautiful dark UI', 'clean coding ASMR') inside video description sections.",
+        "Pin structured chapters list mapping exact time codes to ensure robust engagement on Google Search Carousel results."
+      ],
+      audienceEngagementRoadmap: [
+        "Instate community forum polls sharing setup designs, inviting active dialogue on workstation layout blueprints.",
+        "Introduce visual challenges directly over your active video layers, encouraging corrective type comments."
+      ],
+      competitorBeatingRoadmap: [
+        "Analyze high-ranking competitor walkthroughs, pinpointing unexplained steps to deliver clean, transparent code alternatives.",
+        "Provide open-source files and config packages under simple sub-triggers that competitors usually lock behind paid walls."
+      ],
+      subscriberGrowthRoadmap: [
+        "Deploy polite, ambient verbal mentions prompting users to subscribe for more premium developer content.",
+        "Introduce free aesthetic screen background wallpapers accessible via single subscriber links."
+      ],
+      
+      shortsContentRoadmap: [
+        "Deploy quick, high-speed 15s visual cheat-sheets featuring beautiful layout solutions.",
+        "Create neon-lit typing visual hooks mapping key CSS configurations.",
+        "Produce high-cut lifestyle clips highlighting workspace design elements."
+      ],
+      longFormContentRoadmap: [
+        "Focus on structured multi-hour build guides outlining functional, developer-centered SaaS dashboards.",
+        "Launch serene, vocal-free coding streams showing step-by-step styling loops and interface design iterations."
+      ],
+      viralTopicStrategy: [
+        "Target algorithmic interest trends around high-focus design guides and elegant digital setup blueprints.",
+        "Leverage tech debates on system layouts, styling efficiency, and zero component overhead systems."
+      ],
+      audienceEngagementRoadmapFull: [
+        "Prompt community members to choose the next project build theme via weekly visual polls.",
+        "Feature viewer-suggested custom features prominently in the opening seconds of next Sunday's tutorial upload."
+      ]
+    },
+    
+    // 13 Detailed Growth Improvement suggestions
+    detailedImprovements: {
+      contentStrategy: {
+        whatToChange: "Transition from basic syntax guides to comprehensive, high-fidelity project walkthroughs matching aesthetic developer lifestyle trends.",
+        whyChange: "Basic programming videos are saturated and offer low subscriber conversion. Viewers seek premium, immersive, start-to-finish build experiences.",
+        howToImplement: "Structure uploads as complete projects (e.g., 'Aesthetic Developer Desktop Widget from Scratch'). Highlight the unique UI first.",
+        expectedImpact: "Establishes immediate high perceived value, expected to double baseline organic subscriber conversion rates."
+      },
+      audienceRetention: {
+        whatToChange: "Eliminate dry verbal descriptions and long installation periods directly in the opening 60 seconds.",
+        whyChange: "The first minute determines retention. Monotonous config setups trigger immediate bounces for 45% of potential viewers.",
+        howToImplement: "Always showcase the complete, fully responsive interface running in the initial 5 seconds. Explain key modules with clean overlay diagrams.",
+        expectedImpact: "Saves critical hook retention, elevating typical 30-second retention from 40% to over 72%."
+      },
+      watchTime: {
+        whatToChange: "Repackage stand-alone video releases into thematic, multi-hour study playlist collections.",
+        whyChange: "Longer developer sessions promote natural auto-play, signaling high-value listener engagement to recommendations engines.",
+        howToImplement: "Cluster relevant layout guides into structured curricula (e.g., '10 Hours of Immersive React & TypeScript walkthroughs').",
+        expectedImpact: "Increases average monthly watch-time parameters per user profile by 60%."
+      },
+      ctr: {
+        whatToChange: "Ditch convoluted thumbnail collages for beautiful, dark-slate mockups displaying elegant on-screen interfaces.",
+        whyChange: "Developers are visual design-centric. High-contrast, matte layout designs achieve a clean professional signature.",
+        howToImplement: "Wrap the finished UI in a minimalist device mockup. Pair with strong, bold title text restricted to 3 words.",
+        expectedImpact: "Boosts average click-through-rate parameters from a fragile 2.1% to a healthy 7.5%."
+      },
+      engagement: {
+        whatToChange: "Embed on-screen visual polls and active interactive trivia directly in critical coding intervals.",
+        whyChange: "Active commenting indices boost algorithmic velocity indicators, triggering wider recommended promotions.",
+        howToImplement: "Present a subtle screen bug (e.g., 'Spot the missing index key in this component block') and promise open-source rewards to winners.",
+        expectedImpact: "Doubles organic commenting densities, raising community interaction parameters."
+      },
+      recommendationReach: {
+        whatToChange: "Insert rich semantic keyword coordinates in video descriptions, aligning search term listings with niche channels.",
+        whyChange: "The recommendation algorithm requires precise metadata context clues to place content on appropriate user home feeds.",
+        howToImplement: "Write a 3-paragraph summary of topics, incorporating terms like 'Aesthetic Coding', 'TypeScript Tutorial', and 'React 19 Setup'.",
+        expectedImpact: "Triples impressions across algorithmic suggested-video feeds within 45 days."
+      },
+      subscriberConversion: {
+        whatToChange: "Deploy polished, subtle subscriber triggers ahead of implementing the most exciting UI elements.",
+        whyChange: "Viewers are highly prone to subscribing when emotional value peaks during complex feature demonstrations.",
+        howToImplement: "Include an elegant, silent overlay animation showing the subscription mouse click right as you begin custom styling code.",
+        expectedImpact: "Raises subscriber-to-viewer ratios from a marginal 0.6% to more than 3.2%."
+      },
+      shortsPerformance: {
+        whatToChange: "Structure custom vertical clips as quick visual cheat-sheets featuring high-energy transitions.",
+        whyChange: "Shorts function as high-volume discovery channels, feeding active new viewer populations into long-form content landscapes.",
+        howToImplement: "Reveal a complex component bug and resolve it using single-line Tailwind properties in 15 seconds, detailing long-form walk-through links.",
+        expectedImpact: "Directly funnels over 10,000 new profile impressions to your channel home page weekly."
+      },
+      storytelling: {
+        whatToChange: "Establish a clear Problem-Agitation-Solution narrative structure across the video timeline.",
+        whyChange: "Raw, linear coding screens feel dry. Viewers connect deeply with satisfying problem-solving tracks.",
+        howToImplement: "Start by illustrating the tedious manual alternative, agitate the limitation, and present the clean automated code solution.",
+        expectedImpact: "Maintains intense storytelling interest, reducing drop-offs during long-form coding blocks."
+      },
+      editingQuality: {
+        whatToChange: "Use synchronized micro-zooms on code lines, fluid transitions, and clear terminal audio texturing.",
+        whyChange: "Keeps the viewer's eyes alert on desktop monitors, eliminating visual monotony.",
+        howToImplement: "Apply subtle zoom-ins on complex typing lines. Balance high keyboard ASMR audio tracks under relaxing lo-fi loops.",
+        expectedImpact: "Ensures higher satisfaction scores and sustained focus across detailed technical videos."
+      },
+      branding: {
+        whatToChange: "Aesthetic Workspace Signature: Apply a single, beautifully paired font and strict color schemes.",
+        whyChange: "Unified branding creates immediate brand recall across overcrowded recommended home video feeds.",
+        howToImplement: "Adopt custom Space Grotesk labels for headings, matte slate backgrounds, and emerald color codes for important visual callouts.",
+        expectedImpact: "Establishes an instantly recognizable premium lifestyle presence, creating extreme authority."
+      },
+      uploadConsistency: {
+        whatToChange: "Establish a strict weekly publishing schedule on Sunday afternoons, backed by interactive community posts.",
+        whyChange: "Predictable upload patterns train subscribers to expect your content, building reliable initial velocity metrics.",
+        howToImplement: "Publish every Sunday at 2 PM GMT. Share teaser screenshots of the workspace setup on your community tab on Fridays.",
+        expectedImpact: "Stabilizes active viewer foundations, ensuring a consistent organic baseline for every release."
+      },
+      audienceTrustAndLoyalty: {
+        whatToChange: "Maintain absolute transparency by providing genuine, fully documented source-code packages on GitHub.",
+        whyChange: "Developers value honesty and utility over generic tutorials that hide code behind confusing paywalls.",
+        howToImplement: "Attach direct, unrestricted GitHub links to public repositories in the first line of descriptions, with setup documentation.",
+        expectedImpact: "Fosters deep audience loyalty, turning casual viewers into brand advocates and active community members."
+      }
     }
   };
 }

@@ -50,6 +50,21 @@ export interface VideoPerformance {
   betterTags?: string[];
   betterKeywords?: string[];
   audienceTargetingStrategy?: string;
+
+  // VERY DEEP PERFORMANCE METRICS
+  thumbnailPsychology?: string;
+  titleCtrAnalysis?: string;
+  hookEffectiveness?: string;
+  storytellingQualityAnalysis?: string;
+  editingQualityAnalysis?: string;
+  seoRankingPossibility?: string;
+  reachRecommendationPotential?: string;
+  viralPotentialAnalysis?: string;
+  subscriberConversionPossibility?: string;
+  audienceDropOffReasons?: string;
+  weakSections?: string[];
+  strongSections?: string[];
+  detailedImprovementRecommendations?: string[];
 }
 
 export interface Competitor {
@@ -70,6 +85,13 @@ export interface Competitor {
   brandingStrategy: string;
   strengths: string[];
   weaknesses: string[];
+
+  // DEEPEND COMPETITOR INTEL
+  storytellingQuality?: string;
+  retentionStrategy?: string;
+  brandingQuality?: string;
+  viralContentStrategy?: string;
+  emotionalEngagementMethods?: string;
 }
 
 export interface AudienceReport {
@@ -107,6 +129,39 @@ export interface CompetitorComparison {
   contentGaps: string[];
   untappedOpportunities: string[];
   missingStrategiesInTargetChannel: string[];
+
+  // Deep channel specific growth inhibitors
+  mistakesReducingGrowth?: string;
+  whyVideosNotReachingAudience?: string;
+  whyCompetitorsPerformBetter?: string;
+  strategyGapsExist?: string;
+  underperformingContentStyles?: string;
+  higherReachContentFormats?: string;
+  audienceBehaviorPatternsAffectingGrowth?: string;
+  algorithmFactorsLimitingRecommendations?: string;
+}
+
+export interface GrowthImprovementItem {
+  whatToChange: string;
+  whyChange: string;
+  howToImplement: string;
+  expectedImpact: string;
+}
+
+export interface DetailedGrowthImprovements {
+  contentStrategy: GrowthImprovementItem;
+  audienceRetention: GrowthImprovementItem;
+  watchTime: GrowthImprovementItem;
+  ctr: GrowthImprovementItem;
+  engagement: GrowthImprovementItem;
+  recommendationReach: GrowthImprovementItem;
+  subscriberConversion: GrowthImprovementItem;
+  shortsPerformance: GrowthImprovementItem;
+  storytelling: GrowthImprovementItem;
+  editingQuality: GrowthImprovementItem;
+  branding: GrowthImprovementItem;
+  uploadConsistency: GrowthImprovementItem;
+  audienceTrustAndLoyalty: GrowthImprovementItem;
 }
 
 export interface GrowthRoadmap {
@@ -121,6 +176,12 @@ export interface GrowthRoadmap {
   audienceEngagementRoadmap: string[];
   competitorBeatingRoadmap: string[];
   subscriberGrowthRoadmap: string[];
+
+  // 10 key roadmaps requirements
+  shortsContentRoadmap?: string[];
+  longFormContentRoadmap?: string[];
+  viralTopicStrategy?: string[];
+  audienceEngagementRoadmapFull?: string[];
 }
 
 export interface ChannelOverview {
@@ -194,6 +255,7 @@ export interface Report {
     audienceDemandTrends: string[];
   };
   growthRoadmap: GrowthRoadmap;
+  detailedImprovements?: DetailedGrowthImprovements;
 }
 
 export interface AnalysisInput {

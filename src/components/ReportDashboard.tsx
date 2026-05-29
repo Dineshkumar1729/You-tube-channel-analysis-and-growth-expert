@@ -3,7 +3,7 @@ import {
   BarChart, Sparkles, AlertCircle, Heart, Star, Compass, RefreshCw, 
   Flame, TrendingUp, CheckCircle, HelpCircle, Eye, ThumbsUp, MessageSquare, 
   Lock, BookOpen, UserCheck, ShieldAlert, Award, Grid, Users, LayoutDashboard, Copy,
-  Download, Printer, FileText
+  Download, Printer, FileText, Activity, AlertTriangle, EyeOff, Cpu, Scissors
 } from "lucide-react";
 import { Report, VideoPerformance } from "../types";
 
@@ -403,7 +403,7 @@ export default function ReportDashboard({ report, isSimulated }: ReportDashboard
               </div>
 
               {/* Quick AI recommendation pill */}
-              <div className="bg-gradient-to-br from-slate-900 to-emerald-950/20 border border-emerald-500/20 rounded-2xl p-6 shadow-xl text-sm relative">
+              <div className="bg-gradient-to-br from-slate-900 to-emerald-950/20 border border-emerald-500/20 rounded-2xl p-6 shadow-xl text-sm relative mb-6">
                 <div className="absolute top-3 right-3 text-emerald-400/30">
                   <Sparkles className="w-8 h-8" />
                 </div>
@@ -411,6 +411,93 @@ export default function ReportDashboard({ report, isSimulated }: ReportDashboard
                 <p className="text-slate-300 leading-relaxed text-xs">
                   "Based on deep competitor audits, your narrative styles are deeply calm and readable, but CTR is limited by plain visual thumbnails. Implement the <b>Split-Frame Thumbnail Setup</b> (Problem vs Elegant Solution) to boost your CTR immediately."
                 </p>
+              </div>
+
+              {/* Algorithmic growth obstacles audit segment */}
+              <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-5">
+                <div>
+                  <h3 className="text-sm font-mono uppercase tracking-wider text-slate-200 font-bold flex items-center gap-2">
+                    <Activity className="w-4 h-4 text-red-400 animate-pulse" />
+                    <span>Recommendation Engine & Inhibitor Audit</span>
+                  </h3>
+                  <p className="text-xs text-slate-400 font-sans mt-0.5">
+                    Strategic diagnostic answering the 8 critical algorithmic growth hurdles limiting this channel's discovery.
+                  </p>
+                </div>
+
+                <div className="space-y-4 font-sans text-xs text-slate-300">
+                  <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 space-y-1.5">
+                    <span className="font-mono text-[10px] text-red-400 uppercase font-bold flex items-center gap-1.5">
+                      <AlertTriangle className="w-3.5 h-3.5" /> Mistakes Reducing Growth
+                    </span>
+                    <p className="leading-relaxed text-slate-330">
+                      {report.comparisonTable.mistakesReducingGrowth || "1. Highly technical, literal title syntax limits dynamic curiosities. 2. Excessively slow verbal introductory outlines (>40s). 3. Minimal custom short-form vertical funnels to drive consistent fresh session impressions."}
+                    </p>
+                  </div>
+
+                  <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 space-y-1.5">
+                    <span className="font-mono text-[10px] text-amber-400 uppercase font-semibold flex items-center gap-1.5">
+                      <EyeOff className="w-3.5 h-3.5" /> Why Videos Aren't Reaching More Audience
+                    </span>
+                    <p className="leading-relaxed text-slate-330 font-sans">
+                      {report.comparisonTable.whyVideosNotReachingAudience || "Walkthrough tutorials are heavily personalized for professional devs, missing beginner curiosity bridges that allow the algorithm's vector models to expand suggestions into nearby general learning clusters."}
+                    </p>
+                  </div>
+
+                  <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 space-y-1.5">
+                    <span className="font-mono text-[10px] text-emerald-400 uppercase font-semibold flex items-center gap-1.5">
+                      <TrendingUp className="w-3.5 h-3.5" /> Why Competitors Perform Better
+                    </span>
+                    <p className="leading-relaxed text-slate-330">
+                      {report.comparisonTable.whyCompetitorsPerformBetter || "Competitors leverage active narrative pacing styles, frequently insert sound cues, and design high-contrast titles with structured curiosity gap prompts."}
+                    </p>
+                  </div>
+
+                  <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 space-y-1.5">
+                    <span className="font-mono text-[10px] text-cyan-400 uppercase font-medium flex items-center gap-1.5">
+                      <Compass className="w-3.5 h-3.5" /> Strategic Gaps Identified
+                    </span>
+                    <p className="leading-relaxed text-slate-330">
+                      {report.comparisonTable.strategyGapsExist || "Lack of automated timestamp directories in structural description modules, total absence of visual playlists targeting subscriber retention loops, and zero companion code ZIP resources on GitHub."}
+                    </p>
+                  </div>
+
+                  <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 space-y-1.5">
+                    <span className="font-mono text-[10px] text-pink-400 uppercase font-semibold flex items-center gap-1.5">
+                      <Scissors className="w-3.5 h-3.5" /> Underperforming Content Styles
+                    </span>
+                    <p className="leading-relaxed text-slate-330">
+                      {report.comparisonTable.underperformingContentStyles || "Unedited coding streams where configuration failures and terminal downloading steps persist for up to 5 minutes without cuts, zooms, or overlays."}
+                    </p>
+                  </div>
+
+                  <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 space-y-1.5">
+                    <span className="font-mono text-[10px] text-emerald-300 uppercase font-medium flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5" /> Higher-Reach Content Formats
+                    </span>
+                    <p className="leading-relaxed text-slate-330">
+                      {report.comparisonTable.higherReachContentFormats || "Interactive full project build-alongs paired with aesthetic typing, workstation routines, and curated component template showcases."}
+                    </p>
+                  </div>
+
+                  <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 space-y-1.5">
+                    <span className="font-mono text-[10px] text-blue-400 uppercase font-semibold flex items-center gap-1.5">
+                      <Users className="w-3.5 h-3.5" /> Audience Behavior Dynamics
+                    </span>
+                    <p className="leading-relaxed text-slate-330">
+                      {report.comparisonTable.audienceBehaviorPatternsAffectingGrowth || "Viewers indicate extreme focus but possess brief patience indices, exiting the video frame instantly if dry installation processes drag on for excessive periods."}
+                    </p>
+                  </div>
+
+                  <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 space-y-1.5">
+                    <span className="font-mono text-[10px] text-purple-400 uppercase font-medium flex items-center gap-1.5">
+                      <Cpu className="w-3.5 h-3.5" /> Recommendation Engine Limitation Rules
+                    </span>
+                    <p className="leading-relaxed text-slate-330 font-sans">
+                      {report.comparisonTable.algorithmFactorsLimitingRecommendations || "Low signature CTR values (< 2.8%) combined with high early bounce drop-offs signal down satisfaction states to indexing loops, preventing promotion features."}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -583,6 +670,112 @@ export default function ReportDashboard({ report, isSimulated }: ReportDashboard
                       </div>
                     </div>
                   </div>
+                </div>
+
+                {/* Advanced video psychological and retention analysis section */}
+                <div className="mt-6 border-t border-slate-800 pt-6 space-y-5">
+                  <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold flex items-center gap-1.5">
+                    <Sparkles className="w-4 h-4 text-emerald-400" />
+                    <span>AI Psychology & Technical Metric Breakdown</span>
+                  </h3>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-sans text-slate-300">
+                    {activeVideo.thumbnailPsychology && (
+                      <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <span className="font-mono text-[9px] uppercase text-emerald-400 block font-semibold">Thumbnail Psychology Analysis</span>
+                        <p className="leading-relaxed text-slate-300">{activeVideo.thumbnailPsychology}</p>
+                      </div>
+                    )}
+                    {activeVideo.titleCtrAnalysis && (
+                      <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <span className="font-mono text-[9px] uppercase text-emerald-400 block font-semibold">Title CTR Analysis</span>
+                        <p className="leading-relaxed text-slate-300">{activeVideo.titleCtrAnalysis}</p>
+                      </div>
+                    )}
+                    {activeVideo.hookEffectiveness && (
+                      <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <span className="font-mono text-[9px] uppercase text-emerald-400 block font-semibold">Hook Effectiveness Analysis</span>
+                        <p className="leading-relaxed text-slate-300">{activeVideo.hookEffectiveness}</p>
+                      </div>
+                    )}
+                    {activeVideo.storytellingQualityAnalysis && (
+                      <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <span className="font-mono text-[9px] uppercase text-emerald-400 block font-semibold">Storytelling Quality Analysis</span>
+                        <p className="leading-relaxed text-slate-300">{activeVideo.storytellingQualityAnalysis}</p>
+                      </div>
+                    )}
+                    {activeVideo.editingQualityAnalysis && (
+                      <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <span className="font-mono text-[9px] uppercase text-emerald-400 block font-semibold">Editing Quality Analysis</span>
+                        <p className="leading-relaxed text-slate-300">{activeVideo.editingQualityAnalysis}</p>
+                      </div>
+                    )}
+                    {activeVideo.seoRankingPossibility && (
+                      <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <span className="font-mono text-[9px] uppercase text-emerald-400 block font-semibold">SEO Ranking Possibility Analysis</span>
+                        <p className="leading-relaxed text-slate-300">{activeVideo.seoRankingPossibility}</p>
+                      </div>
+                    )}
+                    {activeVideo.reachRecommendationPotential && (
+                      <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <span className="font-mono text-[9px] uppercase text-emerald-400 block font-semibold">Reach & Recommendation Potential</span>
+                        <p className="leading-relaxed text-slate-300">{activeVideo.reachRecommendationPotential}</p>
+                      </div>
+                    )}
+                    {activeVideo.viralPotentialAnalysis && (
+                      <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <span className="font-mono text-[9px] uppercase text-emerald-400 block font-semibold">Viral Potential Analysis</span>
+                        <p className="leading-relaxed text-slate-300">{activeVideo.viralPotentialAnalysis}</p>
+                      </div>
+                    )}
+                    {activeVideo.subscriberConversionPossibility && (
+                      <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <span className="font-mono text-[9px] uppercase text-emerald-400 block font-semibold">Subscriber Conversion Possibility</span>
+                        <p className="leading-relaxed text-slate-300">{activeVideo.subscriberConversionPossibility}</p>
+                      </div>
+                    )}
+                    {activeVideo.audienceDropOffReasons && (
+                      <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <span className="font-mono text-[9px] uppercase text-red-400 block font-semibold">Audience Retention Drop-Off Reasons</span>
+                        <p className="leading-relaxed text-slate-300">{activeVideo.audienceDropOffReasons}</p>
+                      </div>
+                    )}
+                  </div>
+
+                  {(activeVideo.weakSections || activeVideo.strongSections || activeVideo.detailedImprovementRecommendations) && (
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-sans text-slate-300 pt-2">
+                      {activeVideo.strongSections && activeVideo.strongSections.length > 0 && (
+                        <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800">
+                          <span className="font-mono text-[9px] uppercase text-emerald-400 font-bold block mb-1">Strong Visual Sections</span>
+                          <ul className="list-disc list-inside space-y-1 text-[11px] text-slate-300">
+                            {activeVideo.strongSections.map((sect, sidx) => (
+                              <li key={sidx} className="leading-relaxed">{sect}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {activeVideo.weakSections && activeVideo.weakSections.length > 0 && (
+                        <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800">
+                          <span className="font-mono text-[9px] uppercase text-red-400 font-bold block mb-1">Weak Sections Identified</span>
+                          <ul className="list-disc list-inside space-y-1 text-[11px] text-slate-300">
+                            {activeVideo.weakSections.map((sect, sidx) => (
+                              <li key={sidx} className="leading-relaxed">{sect}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {activeVideo.detailedImprovementRecommendations && activeVideo.detailedImprovementRecommendations.length > 0 && (
+                        <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800">
+                          <span className="font-mono text-[9px] uppercase text-cyan-400 font-bold block mb-1">Detailed Upgrades Action Guide</span>
+                          <ul className="list-disc list-inside space-y-1 text-[11px] text-slate-300">
+                            {activeVideo.detailedImprovementRecommendations.map((rec, sidx) => (
+                              <li key={sidx} className="leading-relaxed">{rec}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -998,6 +1191,72 @@ export default function ReportDashboard({ report, isSimulated }: ReportDashboard
               </div>
             </div>
 
+            {/* 13-point detailed improvement sections block */}
+            {report.detailedImprovements && (
+              <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-xl space-y-6">
+                <div>
+                  <h3 className="text-base font-sans font-bold text-slate-200 flex items-center gap-2">
+                    <Grid className="w-5 h-5 text-emerald-400" />
+                    <span>13-Point Architectural Growth Improvements</span>
+                  </h3>
+                  <p className="text-xs text-slate-400 font-sans mt-0.5">
+                    Complete actionable suggestions detailing exactly what to change, why, how to implement it, and the anticipated algorithm growth impact.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                  {Object.entries(report.detailedImprovements).map(([key, item]) => {
+                    const titlesMap: Record<string, string> = {
+                      contentStrategy: "1. Content Strategy Optimization Blueprint",
+                      audienceRetention: "2. Audience Retention Engineering Methods",
+                      watchTime: "3. cumulative Watch Time Booster Protocols",
+                      ctr: "4. Click-Through-Rate (CTR) Maximization Strategy",
+                      engagement: "5. Interactive Community Engagement & Loyalty",
+                      recommendationReach: "6. YouTube Algorithm Recommendation & Suggestion Reach",
+                      subscriberConversion: "7. Subscriber Conversion Optimization Blueprint",
+                      shortsPerformance: "8. Short-Form Video & Multi-Funnel Mechanics",
+                      storytelling: "9. Professional Analytical Technical Storytelling",
+                      editingQuality: "10. Precision Production & Visual ASMR Editing Quality",
+                      branding: "11. High-Precision Visual Workspace Branding",
+                      uploadConsistency: "12. Systematic Upload Consistency & Velocity Program",
+                      audienceTrustAndLoyalty: "13. Authentic Audience Trust, Value & Open Source Delivery"
+                    };
+
+                    const label = titlesMap[key] || key;
+
+                    return (
+                      <div key={key} className="p-4 bg-slate-950 rounded-xl border border-slate-800/80 hover:border-slate-705 transition-all space-y-3 text-xs font-sans">
+                        <span className="font-sans text-xs font-bold text-emerald-400 block border-b border-slate-900 pb-2">
+                          {label}
+                        </span>
+                        
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1 text-slate-300">
+                          <div>
+                            <span className="font-mono text-[9px] uppercase text-emerald-300/80 block font-semibold">What to Change:</span>
+                            <p className="mt-0.5 leading-relaxed text-[11px] text-slate-300">{item.whatToChange}</p>
+                          </div>
+                          <div>
+                            <span className="font-mono text-[9px] uppercase text-slate-500 block font-semibold">Why to Implement:</span>
+                            <p className="mt-0.5 leading-relaxed text-[11px] text-slate-450">{item.whyChange}</p>
+                          </div>
+                          <div className="sm:col-span-2 border-t border-slate-900/45 pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                            <div>
+                              <span className="font-mono text-[9px] uppercase text-cyan-400 block font-semibold">How to Implement & Setup:</span>
+                              <p className="mt-0.5 leading-relaxed text-[11px] text-slate-200">{item.howToImplement}</p>
+                            </div>
+                            <div>
+                              <span className="font-mono text-[9px] uppercase text-amber-500 block font-semibold">Expected Growth Impact:</span>
+                              <p className="mt-0.5 leading-relaxed text-[11px] text-emerald-400 font-medium">{item.expectedImpact}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
             {/* Growth Roadmap timeline blocks */}
             <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-xl">
               <h3 className="text-base font-sans font-bold text-slate-200 mb-6">
@@ -1080,6 +1339,132 @@ export default function ReportDashboard({ report, isSimulated }: ReportDashboard
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Thematic Growth Paths & Specialized Content Roadmaps block */}
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-xl space-y-6">
+              <div>
+                <h3 className="text-base font-sans font-bold text-slate-200 flex items-center gap-2">
+                  <Compass className="w-5 h-5 text-emerald-400" />
+                  <span>Thematic Strategic Roadmaps & Action Paths</span>
+                </h3>
+                <p className="text-xs text-slate-400 font-sans mt-0.5">
+                  Extremely targeted multi-dimensional roadmaps engineered to outpace competition and systemize channel scale.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-sans text-slate-300">
+                {/* 1. SEO & Discovery Roadmap */}
+                <div className="p-4 bg-slate-950 rounded-xl border border-slate-800 space-y-3">
+                  <span className="font-mono text-[9px] uppercase text-cyan-400 font-bold block border-b border-slate-900 pb-1.5 flex items-center gap-1 font-semibold">
+                    <TrendingUp className="w-3.5 h-3.5" /> 1. SEO & Discovery Roadmap
+                  </span>
+                  <ul className="space-y-2 text-slate-300 text-[11px] list-none">
+                    {(report.growthRoadmap.seoRoadmap || []).map((step, i) => (
+                      <li key={i} className="flex gap-2 leading-relaxed align-top">
+                        <span className="text-cyan-400 font-bold font-mono">▸</span>
+                        <span>{step}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* 2. Subscriber Speed-Growth Path */}
+                <div className="p-4 bg-slate-950 rounded-xl border border-slate-800 space-y-3">
+                  <span className="font-mono text-[9px] uppercase text-emerald-400 font-bold block border-b border-slate-900 pb-1.5 flex items-center gap-1 font-semibold">
+                    <UserCheck className="w-3.5 h-3.5" /> 2. Subscriber Ascent Path
+                  </span>
+                  <ul className="space-y-2 text-slate-300 text-[11px] list-none">
+                    {(report.growthRoadmap.subscriberGrowthRoadmap || []).map((step, i) => (
+                      <li key={i} className="flex gap-2 leading-relaxed align-top">
+                        <span className="text-emerald-400 font-bold font-mono">▸</span>
+                        <span>{step}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* 3. Competitor-Beating roadmap */}
+                <div className="p-4 bg-slate-950 rounded-xl border border-slate-800 space-y-3">
+                  <span className="font-mono text-[9px] uppercase text-amber-400 font-bold block border-b border-slate-900 pb-1.5 flex items-center gap-1 font-semibold">
+                    <Award className="w-3.5 h-3.5" /> 3. Competitor Outpace Plan
+                  </span>
+                  <ul className="space-y-2 text-slate-300 text-[11px] list-none">
+                    {(report.growthRoadmap.competitorBeatingRoadmap || []).map((step, i) => (
+                      <li key={i} className="flex gap-2 leading-relaxed align-top">
+                        <span className="text-amber-400 font-bold font-mono">▸</span>
+                        <span>{step}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* 4. Audience Engagement Plan */}
+                <div className="p-4 bg-slate-950 rounded-xl border border-slate-800 space-y-3">
+                  <span className="font-mono text-[9px] uppercase text-purple-400 font-bold block border-b border-slate-900 pb-1.5 flex items-center gap-1 font-semibold">
+                    <Users className="w-3.5 h-3.5" /> 4. Community Retention Loop
+                  </span>
+                  <ul className="space-y-2 text-slate-300 text-[11px] list-none">
+                    {(report.growthRoadmap.audienceEngagementRoadmapFull || report.growthRoadmap.audienceEngagementRoadmap || []).map((step, i) => (
+                      <li key={i} className="flex gap-2 leading-relaxed align-top">
+                        <span className="text-purple-400 font-bold font-mono">▸</span>
+                        <span>{step}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* 5. Shorts Content Roadmap */}
+                {report.growthRoadmap.shortsContentRoadmap && (
+                  <div className="p-4 bg-slate-950 rounded-xl border border-slate-800 space-y-3">
+                    <span className="font-mono text-[9px] uppercase text-pink-400 font-bold block border-b border-slate-900 pb-1.5 flex items-center gap-1 font-semibold font-medium">
+                      <Scissors className="w-3.5 h-3.5" /> 5. Shorts Funnel Blueprints
+                    </span>
+                    <ul className="space-y-2 text-slate-300 text-[11px] list-none">
+                      {report.growthRoadmap.shortsContentRoadmap.map((step, i) => (
+                        <li key={i} className="flex gap-2 leading-relaxed align-top">
+                          <span className="text-pink-400 font-bold font-mono">▸</span>
+                          <span>{step}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* 6. Long-Form Mastery Roadmap */}
+                {report.growthRoadmap.longFormContentRoadmap && (
+                  <div className="p-4 bg-slate-950 rounded-xl border border-slate-800 space-y-3">
+                    <span className="font-mono text-[9px] uppercase text-blue-400 font-bold block border-b border-slate-900 pb-1.5 flex items-center gap-1 font-semibold font-medium">
+                      <BookOpen className="w-3.5 h-3.5" /> 6. Long-Form Masterclass Path
+                    </span>
+                    <ul className="space-y-2 text-slate-300 text-[11px] list-none">
+                      {report.growthRoadmap.longFormContentRoadmap.map((step, i) => (
+                        <li key={i} className="flex gap-2 leading-relaxed align-top">
+                          <span className="text-blue-400 font-bold font-mono">▸</span>
+                          <span>{step}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* 7. Viral Videos Strategy */}
+                {report.growthRoadmap.viralTopicStrategy && (
+                  <div className="p-4 bg-slate-950 rounded-xl border border-slate-800 space-y-3 md:col-span-2">
+                    <span className="font-mono text-[9px] uppercase text-red-400 font-bold block border-b border-slate-900 pb-1.5 flex items-center gap-1 font-semibold font-medium">
+                      <Flame className="w-3.5 h-3.5" /> 7. Hyper-Viral Topic Blueprint
+                    </span>
+                    <ul className="space-y-2 text-slate-300 text-[11px] list-none">
+                      {report.growthRoadmap.viralTopicStrategy.map((step, i) => (
+                        <li key={i} className="flex gap-2 leading-relaxed align-top">
+                          <span className="text-red-400 font-bold font-mono">▸</span>
+                          <span>{step}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
 
